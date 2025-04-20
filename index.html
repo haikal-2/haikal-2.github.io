@@ -80,6 +80,12 @@
           resultDiv.classList.remove('hidden');
           trackingDataDiv.classList.add('hidden');
           dataList.innerHTML = '';
+          // Add subtle fade-in animation
+          resultDiv.classList.add('opacity-0');
+          setTimeout(() => {
+            resultDiv.classList.remove('opacity-0');
+            resultDiv.classList.add('transition-opacity', 'duration-500');
+          }, 10);
         } else {
           alert('Failed to create tracking link');
         }
@@ -101,6 +107,12 @@
             dataList.appendChild(li);
           });
           trackingDataDiv.classList.remove('hidden');
+          // Add subtle fade-in animation
+          trackingDataDiv.classList.add('opacity-0');
+          setTimeout(() => {
+            trackingDataDiv.classList.remove('opacity-0');
+            trackingDataDiv.classList.add('transition-opacity', 'duration-500');
+          }, 10);
         } else {
           dataList.innerHTML = '<li>No visits recorded yet.</li>';
           trackingDataDiv.classList.remove('hidden');
